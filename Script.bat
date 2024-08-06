@@ -95,6 +95,9 @@ reg add "HKCU\Software\7-Zip\Options" /t reg_dword /v "ContextMenu" /d "4132" /f
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /t reg_sz /v "Debugger" /d "\"C:\Storage\Portable\Notepad++\notepad++.exe\" -notepadStyleCmdline -z" /f
 reg add "HKLM\SOFTWARE\Classes\.bat\ShellNew" /t reg_sz /v "Filename" /d "" /f
+reg add "HKLM\SOFTWARE\Classes\.bat\ShellNew" /t reg_expand_sz /v "ItemName" /d "@%SystemRoot%\System32\acppage.dll,-6002" /f
+reg add "HKCR\batfile" /t reg_expand_sz /v "FriendlyTypeName" /d ".bat" /f
+reg add "HKCR\txtfile" /t reg_expand_sz /v "FriendlyTypeName" /d ".txt" /f
 :: Theme_Visual
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /t reg_dword /v "AppsUseLightTheme" /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /t reg_dword /v "SystemUsesLightTheme" /d "0" /f
