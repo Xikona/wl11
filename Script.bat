@@ -5,8 +5,8 @@ set "act=cscript /nologo "%windir%\System32\slmgr.vbs" //b"
 ( label C:Disk & mkdir "C:\Storage\Portable"
 Files\Nvidia\Nvidia.exe
 :: ------------------------------- !!!
-Files\Nvidia\75Hz.exe /i
-Files\Nvidia\restart-only.exe
+:: Files\Nvidia\75Hz.exe /i
+:: Files\Nvidia\restart-only.exe
 :: -------------------------------
 xcopy "Files\Resource\WinSetView" "C:\Users\%username%\Desktop\WinSetView" /e /y /q /i
 :: Start_Explorer
