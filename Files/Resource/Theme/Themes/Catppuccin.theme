@@ -1,0 +1,63 @@
+; Copyright © NIIVU DESIGNS 2024.
+
+[Theme]
+; Windows - IDS_THEME_DISPLAYNAME_Catppuccin
+DisplayName=Catppuccin
+SetLogonBackground=0
+
+; Computer - SHIDI_SERVER
+[CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-109
+
+; UsersFiles - SHIDI_USERFILES
+[CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-123
+
+; Network - SHIDI_MYNETWORK
+[CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-25
+
+; Recycle Bin - SHIDI_RECYCLERFULL SHIDI_RECYCLER
+[CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon]
+Full=%SystemRoot%\System32\imageres.dll,-54
+Empty=%SystemRoot%\System32\imageres.dll,-55
+
+[Control Panel\Cursors]
+AppStarting=%windir%\Resources\themes\Catppuccin\Cursor\working.ani
+Arrow=%windir%\Resources\themes\Catppuccin\Cursor\normal.cur
+Crosshair=%windir%\Resources\themes\Catppuccin\Cursor\precision.cur
+Hand=%windir%\Resources\themes\Catppuccin\Cursor\link.cur
+Help=%windir%\Resources\themes\Catppuccin\Cursor\help.cur
+IBeam=%windir%\Resources\themes\Catppuccin\Cursor\text.cur
+No=%windir%\Resources\themes\Catppuccin\Cursor\unavailable.cur
+NWPen=%windir%\Resources\themes\Catppuccin\Cursor\handwriting.cur
+SizeAll=%windir%\Resources\themes\Catppuccin\Cursor\move.cur
+SizeNESW=%windir%\Resources\themes\Catppuccin\Cursor\diagonal2.ani
+SizeNS=%windir%\Resources\themes\Catppuccin\Cursor\vertical.ani
+SizeNWSE=%windir%\Resources\themes\Catppuccin\Cursor\diagonal1.ani
+SizeWE=%windir%\Resources\themes\Catppuccin\Cursor\horizontal.ani
+UpArrow=%windir%\Resources\themes\Catppuccin\Cursor\alternate.cur
+Wait=%windir%\Resources\themes\Catppuccin\Cursor\busy.ani
+DefaultValue=Windows Default
+DefaultValue.MUI=@main.cpl,-1020
+
+[Control Panel\Desktop]
+Wallpaper=%SystemRoot%\Resources\Themes\Catppuccin\Wallpapers\img.png
+Pattern=
+MultimonBackgrounds=0
+PicturePosition=4
+WindowsSpotlight=0
+
+[VisualStyles]
+Path=%SystemRoot%\resources\Themes\Catppuccin\Catppuccin.msstyles
+ColorStyle=NormalColor
+Size=NormalSize
+AutoColorization=0
+ColorizationColor=0XC424273A
+SystemMode=Dark
+AppMode=Dark
+VisualStyleVersion=10
+
+
+[MasterThemeSelector]
+MTSM=RJSPBS
