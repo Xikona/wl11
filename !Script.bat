@@ -33,6 +33,7 @@ reg add "HKCU\Software\StartIsBack" /t reg_dword /v "TaskbarCenterIcons" /d "1" 
 reg add "HKCU\Software\StartIsBack" /t reg_dword /v "SysTrayClockFormat" /d "3" /f
 reg add "HKCU\Software\StartIsBack" /t reg_dword /v "SysTrayNetwork" /d "0" /f
 reg add "HKCU\Software\StartIsBack" /t reg_dword /v "NavBarGlass" /d "0" /f
+reg add "HKCU\Software\StartIsBack" /t reg_dword /v "TaskbarColor" /d "2496792" /f
 copy "Files\Resource\Theme\Files\SAB.svg" "C:\Program Files\StartAllBack\Orbs"
 reg add "HKCU\Software\StartIsBack" /t reg_sz /v "OrbBitmap" /d "C:\Program Files\StartAllBack\Orbs\SAB.svg" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\StartPage2" /t reg_binary /v "CustomFolders" /d "160014001f7840f05f6481501b109f0800aa002f954e0000010007e1" /f
