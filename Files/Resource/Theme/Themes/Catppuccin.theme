@@ -1,4 +1,4 @@
-; Copyright © NIIVU DESIGNS 2024.
+; Copyright Â© NIIVU DESIGNS 2024.
 
 [Theme]
 ; Windows - IDS_THEME_DISPLAYNAME_Catppuccin
@@ -53,7 +53,7 @@ Path=%SystemRoot%\resources\Themes\Catppuccin\Catppuccin.msstyles
 ColorStyle=NormalColor
 Size=NormalSize
 AutoColorization=0
-ColorizationColor=0XC424273A
+ColorizationColor=0XC431334E
 SystemMode=Dark
 AppMode=Dark
 VisualStyleVersion=10
