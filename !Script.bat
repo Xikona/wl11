@@ -2,7 +2,7 @@
 :: Base
 set "act=cscript /nologo "%windir%\System32\slmgr.vbs" //b"
 %act% /ipk "TX9XD-98N7V-6WMQ6-BX7FG-H8Q99" & %act% /skms kms.digiboy.ir & %act% /ato
-( label C:Disk & mkdir "C:\Storage\Portable"
+( label C:Disk & mkdir "C:\Storage"
 Files\Nvidia\Nvidia.exe
 :: ------------------------------- !!!
 :: Files\Nvidia\75Hz.exe /i
@@ -94,7 +94,7 @@ reg delete "HKLM\SOFTWARE\Classes\.zip\CompressedFolder\ShellNew" /f
 reg delete "HKCR\DesktopBackground\Shell\cmd" /f
 reg add "HKCU\Software\7-Zip\Options" /t reg_dword /v "ContextMenu" /d "4132" /f
 reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /f
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /t reg_sz /v "Debugger" /d "\"C:\Storage\Portable\Notepad++\notepad++.exe\" -notepadStyleCmdline -z" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /t reg_sz /v "Debugger" /d "\"C:\Storage\Notepad++\notepad++.exe\" -notepadStyleCmdline -z" /f
 reg add "HKLM\SOFTWARE\Classes\.bat\ShellNew" /t reg_sz /v "Filename" /d "" /f
 reg add "HKLM\SOFTWARE\Classes\.bat\ShellNew" /t reg_expand_sz /v "ItemName" /d "@%SystemRoot%\System32\acppage.dll,-6002" /f
 reg add "HKCR\batfile" /t reg_expand_sz /v "FriendlyTypeName" /d ".bat" /f
