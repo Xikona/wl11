@@ -151,6 +151,7 @@ Files/patch/patcher.bat & start dwm.exe
 :: System
 copy "hotkey\re.bat" "%windir%"
 del "hotkey\re.bat"
+xcopy "hotkey" "C:\Users\%username%\Desktop\hotkey" /e /y /q /i
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\PushNotifications" /t reg_dword /v "ToastEnabled" /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /t reg_dword /v "StartupDelayInMSec" /d "0" /f
 reg add "HKCU\Control Panel\Desktop" /t reg_sz /v "MenuShowDelay" /d "100" /f
