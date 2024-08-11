@@ -1,0 +1,7 @@
+[FILENAMES]
+Exe= shell32.dll.mun
+SaveAs= shell32.dll.mun
+
+[COMMANDS]
+-addoverwrite Bitmap633.bmp, BITMAP,633,
+-addoverwrite Bitmap635.bmp, BITMAP,635
