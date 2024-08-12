@@ -11,6 +11,4 @@ copy "shell32.dll.mun" "%windir%\SystemResources"
 
 del "shell32.dll.mun"
 
-:: start explorer.exe
-
-exit
+start explorer.exe
