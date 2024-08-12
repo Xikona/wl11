@@ -149,6 +149,7 @@ xcopy "Files\Resource\Theme\Nilesoft Shell" "C:\Storage\Nilesoft Shell" /e /y /q
 start "" "C:\Storage\Nilesoft Shell\shell.exe" -r
 xcopy "Files\patch" "C:\Users\%username%\Desktop\patch" /e /y /q /i
 call C:\Users\%username%\Desktop\patch\patcher.bat
+rd /q /s "C:\Users\%username%\Desktop\patch"
 :: System
 copy "hotkey\re.bat" "%windir%"
 del "hotkey\re.bat"
