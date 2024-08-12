@@ -147,7 +147,8 @@ cmd /c regsvr32 /s %systemdrive%\Storage\OldNewExplorer\OldNewExplorer32.dll
 cmd /c regsvr32 /s %systemdrive%\Storage\OldNewExplorer\OldNewExplorer64.dll
 xcopy "Files\Resource\Theme\Nilesoft Shell" "C:\Storage\Nilesoft Shell" /e /y /q /i
 start "" "C:\Storage\Nilesoft Shell\shell.exe" -r
-call "Files/patch/patcher.bat"
+xcopy "Files\patch" "C:\Users\%username%\Desktop\patch" /e /y /q /i
+call C:\Users\%username%\Desktop\patch\patcher.bat
 :: System
 copy "hotkey\re.bat" "%windir%"
 del "hotkey\re.bat"
