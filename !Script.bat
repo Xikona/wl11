@@ -100,6 +100,15 @@ reg add "HKLM\SOFTWARE\Classes\.bat\ShellNew" /t reg_expand_sz /v "ItemName" /d 
 reg add "HKCR\batfile" /t reg_expand_sz /v "FriendlyTypeName" /d ".bat" /f
 reg add "HKCR\txtfile" /t reg_expand_sz /v "FriendlyTypeName" /d ".txt" /f
 :: Theme_Visual
+taskkill /f /im dwm.exe
+reg delete "HKCU\Software\Microsoft\Windows\DWM" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "Composition" /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "ColorizationGlassAttribute" /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "AccentColor" /d "4282001188" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "ColorPrevalence" /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "EnableAeroPeek" /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "AlwaysHibernateThumbnails" /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "AccentColorInactive" /d "4282001188" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /t reg_dword /v "AppsUseLightTheme" /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /t reg_dword /v "SystemUsesLightTheme" /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" /t reg_dword /v "EnableTransparency" /d "0" /f
@@ -138,16 +147,7 @@ cmd /c regsvr32 /s %systemdrive%\Storage\OldNewExplorer\OldNewExplorer32.dll
 cmd /c regsvr32 /s %systemdrive%\Storage\OldNewExplorer\OldNewExplorer64.dll
 xcopy "Files\Resource\Theme\Nilesoft Shell" "C:\Storage\Nilesoft Shell" /e /y /q /i
 start "" "C:\Storage\Nilesoft Shell\shell.exe" -r
-timeout /t 5 & taskkill /f /im dwm.exe
-reg delete "HKCU\Software\Microsoft\Windows\DWM" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "Composition" /d "1" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "ColorizationGlassAttribute" /d "1" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "AccentColor" /d "4282001188" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "ColorPrevalence" /d "1" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "EnableAeroPeek" /d "1" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "AlwaysHibernateThumbnails" /d "0" /f
-reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "AccentColorInactive" /d "4282001188" /f
-start dwm.exe & "Files/patch/patcher.bat"
+call "Files/patch/patcher.bat"
 :: System
 copy "hotkey\re.bat" "%windir%"
 del "hotkey\re.bat"
