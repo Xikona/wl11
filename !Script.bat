@@ -147,9 +147,6 @@ cmd /c regsvr32 /s %systemdrive%\Storage\OldNewExplorer\OldNewExplorer32.dll
 cmd /c regsvr32 /s %systemdrive%\Storage\OldNewExplorer\OldNewExplorer64.dll
 xcopy "Files\Resource\Theme\Nilesoft Shell" "C:\Storage\Nilesoft Shell" /e /y /q /i
 start "" "C:\Storage\Nilesoft Shell\shell.exe" -r
-xcopy "Files\patch" "C:\Users\%username%\Desktop\patch" /e /y /q /i
-call C:\Users\%username%\Desktop\patch\patcher.bat
-rd /q /s "C:\Users\%username%\Desktop\patch"
 :: System
 copy "hotkey\re.bat" "%windir%"
 del "hotkey\re.bat"
@@ -170,4 +167,7 @@ reg add "HKCU\Control Panel\Mouse" /t reg_sz /v "MouseThreshold2" /d "0" /f
 reg add "HKCU\Control Panel\Keyboard" /t reg_dword /v "PrintScreenKeyForSnippingEnabled" /d "0" /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\SystemRestore" /t reg_dword /v "DisableSR" /d "1" /f
 vssadmin delete shadows /all /quiet
-sc config "Spooler" start=disabled ) >nul 2>&1 & shutdown /r /t 5
+sc config "Spooler" start=disabled
+xcopy "Files\patch" "C:\Users\%username%\Desktop\patch" /e /y /q /i
+call C:\Users\%username%\Desktop\patch\patcher.bat
+rd /q /s "C:\Users\%username%\Desktop\patch" ) >nul 2>&1 & shutdown /r /t 5
