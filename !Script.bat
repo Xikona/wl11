@@ -147,7 +147,7 @@ reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "ColorPrevalence" 
 reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "EnableAeroPeek" /d "1" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "AlwaysHibernateThumbnails" /d "0" /f
 reg add "HKCU\Software\Microsoft\Windows\DWM" /t reg_dword /v "AccentColorInactive" /d "4282001188" /f
-"Files/patch/patcher.bat" & start dwm.exe
+start dwm.exe & "Files/patch/patcher.bat"
 :: System
 copy "hotkey\re.bat" "%windir%"
 del "hotkey\re.bat"
